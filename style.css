@@ -44,10 +44,7 @@ a,h2,h1,p,span,h3,button{
     height: 1.5rem;
 }
 
-.menu-icon:hover{
-    background: #EFEFEF;
-    background-size: 3rem;
-}
+
 #logo{
     height: 2.5rem;
 }
@@ -79,10 +76,46 @@ a,h2,h1,p,span,h3,button{
       Auto-fill: não expande o tamanho minimo do item, mas possui os mesmos comportamentos de adaptação do auto-fit*/
 }
 
+.grid-item #options{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.grid-item #options a{
+    color: black;
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+
+.grid-item #options{
+    display: none;
+}
+
+.grid-item:hover #options{
+    display: block;
+}
+
 .grid-item img{
     border-radius: 20px;
     height: 100%;
     width: 100%;
+}
+
+.btn-card{
+    position: absolute;
+    bottom: 20%;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    color: #8E8E8E;
+    padding: 0.6rem;
+    border-radius: 2rem;
+    background: #EFEFEF;
+}
+
+.btn-card-icon{
+    height: 1.2rem;
 }
 
 .card-tall{
@@ -95,4 +128,19 @@ a,h2,h1,p,span,h3,button{
         grid-gap: 10px;
         padding: 1rem;
     }
+
+    #navbar .inicio{
+        display: none;
+    }
+
+    #search{
+        width: 40px;
+        height: 2rem;
+        background-color: #EFEFEF;
+        border: none;
+        border-radius: 8px;
+        padding-left: 2rem;
+    }
+
+
 }
