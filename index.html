@@ -1,3 +1,12 @@
+<!--
+     TO DO
+
+     - Remover margin direita do container (igualar ambas)
+     - Colocar icone de pesquisa na barra de pesquisa
+     - Corrigir margin direita na div options
+     - Fazer overlay da div options funcionar
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,12 +20,19 @@
     <nav id="navbar">
         <img id="logo" src="icons/logo.png" alt="">
         <form action="">
+            <i>
+             <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#8E8E8E"
+                stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="search-icon">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            </i>
             <input type="text" name="search" id="search" placeholder="Pesquisar">
         </form>
-        <button class=" inicio" id="active">Página inicial</button>
-        <button>Seguindo</button>
+        <button class="active">Página inicial</button>
+        <button class="active">Seguindo</button>
         <div>
-            <button>User</button>
+            <button class="active">User</button>
         </div>
         <button><img class="menu-icon" src="icons/message-circle.svg" alt=""></button>
         <button><img class="menu-icon" src="icons/bell.svg" alt=""></button>
@@ -27,11 +43,12 @@
             <img src="images/image1.jpg" alt="">
             <div id="options">
                 <button class="btn-card"><a href="https://feathericons.com">feathericons.com</a></button>
-                <button class="btn-card btn-card-icon"><img class="menu-icon" src="icons/menu.svg" alt=""></button>
+                <button class="btn-card"><img class="menu-icon" src="icons/menu.svg" alt=""></button>
             </div>
         </div>
         <div class="grid-item">
             <img src="images/image2.jpg" alt="">
+           
         </div>
         <div class="grid-item">
             <img src="images/image5.jpg" alt="">
@@ -88,7 +105,7 @@
             <img src="images/image7.jpg" alt="">
         </div>
         <div class="grid-item">
-            <img src="images/image4.jpg" alt="">
+            <img src="images/image4.png" alt="">
         </div>
         <div class="grid-item">
             <img src="images/image5.jpg" alt="">

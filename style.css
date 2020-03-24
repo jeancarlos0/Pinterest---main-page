@@ -1,4 +1,4 @@
-body,a,h1,h2,p,span{
+body,a,h1,h2,p,span,main,div{
     margin: 0;
     padding: 0;
 }
@@ -32,12 +32,12 @@ a,h2,h1,p,span,h3,button{
     background: transparent;
 }
 
-#navbar #active{
+#navbar .active{
     color: black;
 }
 
 #navbar button:hover{
-    background: #EFEFEF;
+    v
 }
 
 .menu-icon{
@@ -58,13 +58,26 @@ a,h2,h1,p,span,h3,button{
     padding-left: 2rem;
 }
 
+.search-icon{
+    height: 1.2rem;
+    position: absolute;
+    margin: 0;
+    padding: 7px;
+    border: none;
+}
+
+.search-icon:hover{
+    background: none;
+}
+
 #search::placeholder{
-    padding: 0;
+    padding-left: 20px;
     font-size: 1.2em;
     font-weight: 700;
 }
 
 #grid{
+    margin: auto;
     margin-top: 4rem;
     width: 100%;
     display: grid;
@@ -76,16 +89,44 @@ a,h2,h1,p,span,h3,button{
       Auto-fill: não expande o tamanho minimo do item, mas possui os mesmos comportamentos de adaptação do auto-fit*/
 }
 
-.grid-item #options{
+.grid-item img{
+    border-radius: 20px;
+    height: 100%;
+    width: 100%;
+}
+
+
+.btn-card{
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    color: #8E8E8E;
+    padding: 0.6rem;
+    border-radius: 2rem;
+    background: #EFEFEF;
+    height: 2.5rem;
+}
+
+.card-tall{
+    grid-row:  span 2 / auto;
+}
+
+#options{
+    position: absolute;
+    bottom: 20%;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .grid-item #options a{
     color: black;
     font-weight: 700;
     font-size: 0.8rem;
+
+}
+
+.grid-item #options button{
+    
 }
 
 .grid-item #options{
@@ -96,51 +137,39 @@ a,h2,h1,p,span,h3,button{
     display: block;
 }
 
-.grid-item img{
-    border-radius: 20px;
-    height: 100%;
-    width: 100%;
-}
-
-.btn-card{
-    position: absolute;
-    bottom: 20%;
-    border: none;
-    cursor: pointer;
-    font-weight: 600;
-    color: #8E8E8E;
-    padding: 0.6rem;
-    border-radius: 2rem;
-    background: #EFEFEF;
-}
-
-.btn-card-icon{
-    height: 1.2rem;
-}
-
-.card-tall{
-    grid-row:  span 2 / auto;
-}
 
 @media (max-width: 600px){
     
     #grid{
         grid-gap: 10px;
         padding: 1rem;
+        grid-template-columns: repeat(auto-fit, minMax(170px, 220px));
+        grid-auto-rows: 190px;
     }
 
-    #navbar .inicio{
+    #navbar button{
+        padding: 0.4rem;
+    }
+    
+    #search{
         display: none;
     }
 
-    #search{
-        width: 40px;
-        height: 2rem;
-        background-color: #EFEFEF;
+    .search-icon{
+        height: 1.5rem;
+        position: relative;
+        margin: 0;
+        padding: 0;
         border: none;
-        border-radius: 8px;
-        padding-left: 2rem;
     }
-
+    
+   
+    #navbar .active{
+        display: none;
+    }    
+    #navbar{
+        width: 100%;
+        margin: 0 auto;
+    }
 
 }
